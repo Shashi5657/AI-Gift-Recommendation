@@ -25,51 +25,46 @@ function QuestionnaireForm({ onRecommendations }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
-      <h2>Tell us about the recipient</h2>
-      <div style={{ marginBottom: "10px" }}>
-        <label>
-          Personality Traits:
-          <br />
-          <input
-            type="text"
-            value={personalityTraits}
-            onChange={(e) => setPersonalityTraits(e.target.value)}
-            placeholder="e.g. artistic, outdoorsy, introverted"
-            style={{ width: "300px" }}
-          />
-        </label>
+    <div className="card shadow-sm">
+      <div className="card-body">
+        <h2 className="card-title mb-4">Tell Us About the Recipient</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Personality Traits</label>
+            <input
+              type="text"
+              className="form-control"
+              value={personalityTraits}
+              onChange={(e) => setPersonalityTraits(e.target.value)}
+              placeholder="e.g., artistic, outdoorsy, introverted"
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Preferences or Interests</label>
+            <input
+              type="text"
+              className="form-control"
+              value={preferences}
+              onChange={(e) => setPreferences(e.target.value)}
+              placeholder="e.g., coffee, gardening, meditation"
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Occasion</label>
+            <input
+              type="text"
+              className="form-control"
+              value={occasion}
+              onChange={(e) => setOccasion(e.target.value)}
+              placeholder="e.g., birthday, anniversary, graduation"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Get Recommendations
+          </button>
+        </form>
       </div>
-      <div style={{ marginBottom: "10px" }}>
-        <label>
-          Preferences or Interests:
-          <br />
-          <input
-            type="text"
-            value={preferences}
-            onChange={(e) => setPreferences(e.target.value)}
-            placeholder="e.g. coffee, gardening, meditation"
-            style={{ width: "300px" }}
-          />
-        </label>
-      </div>
-      <div style={{ marginBottom: "10px" }}>
-        <label>
-          Occasion:
-          <br />
-          <input
-            type="text"
-            value={occasion}
-            onChange={(e) => setOccasion(e.target.value)}
-            placeholder="e.g. birthday, anniversary, graduation"
-            style={{ width: "300px" }}
-          />
-        </label>
-      </div>
-      <button type="submit" style={{ padding: "8px 16px" }}>
-        Get Recommendations
-      </button>
-    </form>
+    </div>
   );
 }
 
