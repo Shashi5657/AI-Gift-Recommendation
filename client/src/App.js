@@ -6,12 +6,17 @@ function App() {
   const [recommendations, setRecommendations] = useState(null);
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>Personalized Gift Recommendation Platform</h1>
+    <div className="container py-5">
+      <h1 className="text-center mb-4">
+        Personalized Gift Recommendation Platform
+      </h1>
       <QuestionnaireForm onRecommendations={setRecommendations} />
       {recommendations && (
         <GiftRecommendations recommendations={recommendations} />
       )}
+      <p className="footer-note text-center mt-5">
+        Powered by AI-driven suggestions.
+      </p>
     </div>
   );
 }
