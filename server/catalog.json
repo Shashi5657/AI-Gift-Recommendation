@@ -1,0 +1,26 @@
+[
+  {
+    "id": "gift-1",
+    "name": "Luxury Scented Candle",
+    "category": "Home",
+    "price": 25.99,
+    "description": "A soothing lavender scented candle for relaxation.",
+    "url": "https://example.com/products/luxury-scented-candle"
+  },
+  {
+    "id": "gift-2",
+    "name": "Gourmet Chocolate Box",
+    "category": "Food",
+    "price": 49.99,
+    "description": "An assortment of fine, handmade chocolates.",
+    "url": "https://example.com/products/gourmet-chocolate-box"
+  },
+  {
+    "id": "gift-3",
+    "name": "Personalized Leather Journal",
+    "category": "Stationery",
+    "price": 35.0,
+    "description": "A premium leather journal embossed with the recipient’s initials.",
+    "url": "https://example.com/products/leather-journal"
+  }
+]
